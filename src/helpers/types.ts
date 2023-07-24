@@ -3,3 +3,7 @@ export type IProgressiveImage = {
   placeholder: string;
   alt: string;
 };
+export type IMenu = {
+  id: number;
+  title: string;
+};
