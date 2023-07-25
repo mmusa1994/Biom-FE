@@ -34,3 +34,14 @@ export type TMeeTBiom = {
   listOfServices: TListOfServices[];
   image: string;
 };
+
+export type TPanels = {
+  id: number;
+  image: string;
+};
+
+export type TADPanels = {
+  title: string;
+  subtitle: string;
+  panels: TPanels[];
+};
