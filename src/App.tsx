@@ -29,7 +29,7 @@ function App() {
         />
         <ADPanels
           title={"when you need it."}
-          subtitle={"WHERE YOU NEED IT"}
+          subtitle={"where you need it"}
           panels={PANELS}
         />
       </main>

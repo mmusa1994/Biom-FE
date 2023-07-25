@@ -8,7 +8,7 @@ import Cart from "../../assets/icons/cart.svg";
 
 const NavigationDesktop: React.FC = () => {
   return (
-    <nav className="hidden md:flex sticky top-0 bg-white w-full justify-between items-center max-w-[1440px] h-[68px] px-12 z-30">
+    <nav className="hidden lg:flex sticky top-0 bg-white w-full justify-between items-center max-w-[1440px] h-[68px] px-12 z-30">
       <div className="flex items-center gap-3">
         {MENU_ITEMS.map((item: TMenu) => (
           <div

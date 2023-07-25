@@ -2,7 +2,15 @@ import React, { useState, useEffect } from "react";
 import { TProgressiveImage } from "../../helpers/types";
 
 const ImageLoad: React.FC<TProgressiveImage> = React.memo(
-  ({ src, placeholder, alt = "", className, isBackground, children }) => {
+  ({
+    src,
+    placeholder,
+    alt = "",
+    className,
+    isBackground,
+    children,
+    cover,
+  }) => {
     const [loading, setLoading] = useState(true);
     const [currentSrc, updateSrc] = useState(placeholder);
 
@@ -20,7 +28,8 @@ const ImageLoad: React.FC<TProgressiveImage> = React.memo(
         <div
           className={className}
           style={{
-            background: `url(${currentSrc}) no-repeat center center / contain`,
+            background: `url(${currentSrc}) no-repeat center center`,
+            backgroundSize: cover ? "cover" : "contain",
             opacity: loading ? 0.5 : 1,
             transition: "opacity .15s linear",
           }}

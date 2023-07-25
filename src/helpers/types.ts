@@ -7,6 +7,7 @@ export type TProgressiveImage = {
   className?: string;
   isBackground?: boolean;
   children?: JSX.Element | ReactNode;
+  cover?: boolean;
 };
 
 export type TMenu = {
