@@ -40,3 +40,16 @@
 .custom-scrollbar {
   scrollbar-width: none;
 }
+
+@keyframes scrollText {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-scrolling {
+  animation: scrollText 10s linear infinite;
+}

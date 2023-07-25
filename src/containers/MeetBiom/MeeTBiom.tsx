@@ -17,10 +17,12 @@ const MeeTBiom: React.FC<TMeeTBiom> = ({
       alt="MeetBiom"
       isBackground
     >
-      <div className="max-[1355px]:hidden block absolute left-[-37%] top-[0%] h-[520px] w-[1355px] z-10 overflow-scroll custom-scrollbar">
-        <h1 className="brandon-grotesque-bold transform -rotate-90 text-gray text-[225px]  tracking-tighter whitespace-nowrap">
-          meet biom
-        </h1>
+      <div className="max-[1355px]:hidden block absolute left-[-40%] top-[0%] h-[520px] w-[1355px] z-10 overflow-scroll custom-scrollbar ">
+        <div className="animate-scrolling">
+          <h1 className="brandon-grotesque-bold transform -rotate-90 text-gray text-[225px] tracking-tighter whitespace-nowrap">
+            meet biom
+          </h1>
+        </div>
       </div>
       <div className="w-full flex flex-col items-end justify-start text-black0 mt-24 xl:pr-40 text-primary">
         <div className="max-w-[565px] flex flex-col gap-4">
