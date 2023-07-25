@@ -13,6 +13,7 @@ export type TProgressiveImage = {
 export type TMenu = {
   id: number;
   title: string;
+  icon?: string | undefined;
 };
 
 export type TBanner = {

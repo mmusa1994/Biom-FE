@@ -1,5 +1,10 @@
 import React from "react";
-import { ADPanels, Banner, NavigationDesktop } from "./containers";
+import {
+  ADPanels,
+  Banner,
+  NavigationDesktop,
+  NavigationMobile,
+} from "./containers";
 import { MeeTBiom } from "./containers";
 
 import Kitchen from "./assets/kitchen.png";
@@ -32,6 +37,7 @@ function App() {
           subtitle={"where you need it"}
           panels={PANELS}
         />
+        <NavigationMobile />
       </main>
       <footer></footer>
     </div>

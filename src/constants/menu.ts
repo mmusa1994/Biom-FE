@@ -1,3 +1,5 @@
+import Cart from "../assets/icons/cart.svg";
+
 export const MENU_ITEMS = [
   {
     id: 1,
@@ -17,9 +19,11 @@ export const MENU_CRUCIAL = [
   {
     id: 1,
     title: "sign in",
+    icon: "",
   },
   {
     id: 2,
     title: "cart",
+    icon: Cart,
   },
 ];
