@@ -1,7 +1,11 @@
 import React from "react";
+import { Banner, NavigationDesktop } from "./containers";
+import { MeeTBiom } from "./containers";
+
+import Kitchen from "./assets/kitchen.png";
+import MeetBiomBG from "./assets/maskBiom.png";
+
 import "./App.css";
-import { Banner, NavigationDesktop } from "./components";
-import Kitchen from "./assets/Kitchen_3.png";
 
 function App() {
   return (
@@ -16,6 +20,7 @@ function App() {
           actionText="Get started"
           image={Kitchen}
         />
+        <MeeTBiom image={MeetBiomBG} />
       </main>
       <footer></footer>
     </div>

@@ -20,3 +20,7 @@ export type TBanner = {
   actionText: string;
   image: string;
 };
+
+export type TMeeTBiom = {
+  image: string;
+};

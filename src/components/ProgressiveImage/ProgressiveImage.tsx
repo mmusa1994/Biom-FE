@@ -20,10 +20,9 @@ const ImageLoad: React.FC<TProgressiveImage> = React.memo(
         <div
           className={className}
           style={{
-            backgroundImage: `url(${currentSrc})`,
+            background: `url(${currentSrc}) no-repeat center center / contain`,
             opacity: loading ? 0.5 : 1,
             transition: "opacity .15s linear",
-            backgroundRepeat: "no-repeat",
           }}
         >
           {children}

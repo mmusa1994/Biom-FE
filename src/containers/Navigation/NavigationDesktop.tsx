@@ -1,6 +1,6 @@
 import React from "react";
 import { MENU_ITEMS, MENU_CRUCIAL } from "../../constants/menu";
-import { ProgressiveImage } from "..";
+import { ProgressiveImage } from "../../components";
 import { TMenu } from "../../helpers/types";
 
 import Logo from "../../assets/logo/logo.svg";
