@@ -6,7 +6,7 @@ import React, {
 import { twMerge } from "tailwind-merge";
 
 enum ButtonStyle {
-  primary = "text-white bg-primary hover:bg-primary-light",
+  primary = "text-white bg-primary hover:bg-primary-hover",
   secondary = "text-primary bg-white hover:bg-gray",
 }
 

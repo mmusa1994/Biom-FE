@@ -6,13 +6,12 @@ import Kitchen from "./assets/kitchen.png";
 import MeetBiomBG from "./assets/maskBiom.png";
 
 import "./App.css";
+import { SERVICES } from "./mock/services";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <NavigationDesktop />
-      </header>
+      <NavigationDesktop />
       <main className="w-full flex flex-col justify-start items-center">
         <Banner
           title="So fresh. So green."
@@ -20,7 +19,13 @@ function App() {
           actionText="Get started"
           image={Kitchen}
         />
-        <MeeTBiom image={MeetBiomBG} />
+        <MeeTBiom
+          image={MeetBiomBG}
+          title="THE BIOM DISPENSER"
+          subtitle="Redefine your experience of clean."
+          description="A quality engineered wipes dispenser that looks beautiful in your home, making better habits for your home and planet always within reach."
+          listOfServices={SERVICES}
+        />
       </main>
       <footer></footer>
     </div>

@@ -21,6 +21,16 @@ export type TBanner = {
   image: string;
 };
 
+export type TListOfServices = {
+  id: number;
+  icon: string;
+  text: string;
+};
+
 export type TMeeTBiom = {
+  title: string;
+  subtitle: string;
+  description: string;
+  listOfServices: TListOfServices[];
   image: string;
 };
