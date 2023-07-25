@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { IProgressiveImage } from "../../helpers/types";
+import { TProgressiveImage } from "../../helpers/types";
 
-const ImageLoad: React.FC<IProgressiveImage> = React.memo(
-  ({ src, placeholder, alt = "" }) => {
+const ImageLoad: React.FC<TProgressiveImage> = React.memo(
+  ({ src, placeholder, alt = "", className, isBackground, children }) => {
     const [loading, setLoading] = useState(true);
     const [currentSrc, updateSrc] = useState(placeholder);
 
@@ -15,8 +15,25 @@ const ImageLoad: React.FC<IProgressiveImage> = React.memo(
       };
     }, [src]);
 
+    if (isBackground) {
+      return (
+        <div
+          className={className}
+          style={{
+            backgroundImage: `url(${currentSrc})`,
+            opacity: loading ? 0.5 : 1,
+            transition: "opacity .15s linear",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {children}
+        </div>
+      );
+    }
+
     return (
       <img
+        className={className}
         src={currentSrc}
         style={{
           opacity: loading ? 0.5 : 1,

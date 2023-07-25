@@ -3,7 +3,30 @@
   justify-content: center;
 }
 
-.menu-item {
-  font-family: brandon-grotesque, sans-serif;
-  font-style: normal;
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("./assets/fonts/brand_ssv/Brandon_reg.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Bold";
+  src: url("./assets/fonts/brand_ssv/Brandon_bld.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Chronicle Display";
+  src: url("./assets/fonts/chronicle-display/Chronicle\ Display\ Roman.otf")
+    format("truetype");
+}
+
+.brandon-grotesque {
+  font-family: "Brandon Grotesque", sans-serif;
+}
+
+.brandon-grotesque-bold {
+  font-family: "Brandon Grotesque Bold", sans-serif;
+}
+
+.chronicle-display {
+  font-family: "Chronicle Display", sans-serif;
 }
