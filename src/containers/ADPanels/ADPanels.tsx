@@ -14,16 +14,16 @@ const ADPanels: React.FC<TADPanels> = ({ title, subtitle, panels }) => {
         </h3>
       </div>
       <div className="w-full flex items-center gap-6 flex-nowrap overflow-scroll custom-scrollbar mx-2">
-        {panels.length &&
-          panels.map((el: TPanels, i: number) => (
-            <div key={el.id}>
+        {panels?.length &&
+          panels?.map((el: TPanels, i: number) => (
+            <figure key={el.id}>
               <ProgressiveImage
                 className="min-w-[300px] md:min-w-[535px] md:h-[415px]"
                 src={el.image}
                 placeholder={el.image}
                 alt={`panel #${i}`}
               />
-            </div>
+            </figure>
           ))}
       </div>
     </section>

@@ -21,7 +21,7 @@ const NavigationDesktop: React.FC = () => {
       <figure>
         <ProgressiveImage src={Logo} placeholder={Logo} alt="Logo" />
       </figure>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-5">
         {MENU_CRUCIAL.map((item: TMenu) => (
           <div
             className="brandon-grotesque-bold flex items-center text-[15px] leading-[22px] tracking-widest text-black uppercase hover:text-gray-500 cursor-pointer"

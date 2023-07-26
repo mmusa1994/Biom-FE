@@ -47,3 +47,13 @@ export type TADPanels = {
   subtitle: string;
   panels: TPanels[];
 };
+
+export type TTypes = {
+  id: number;
+  image: string;
+};
+
+export type TBiomTypes = {
+  types?: TTypes[];
+  message: string;
+};

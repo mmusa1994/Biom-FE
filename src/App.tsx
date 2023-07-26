@@ -2,17 +2,19 @@ import React from "react";
 import {
   ADPanels,
   Banner,
+  BiomTypes,
   NavigationDesktop,
   NavigationMobile,
 } from "./containers";
 import { MeeTBiom } from "./containers";
+import { SERVICES } from "./mock/services";
+import { PANELS } from "./mock/panels";
+import { BIN_TYPES } from "./mock/types";
 
 import Kitchen from "./assets/kitchen.png";
 import MeetBiomBG from "./assets/maskBiom.png";
 
 import "./App.css";
-import { SERVICES } from "./mock/services";
-import { PANELS } from "./mock/panels";
 
 function App() {
   return (
@@ -36,6 +38,10 @@ function App() {
           title={"when you need it."}
           subtitle={"where you need it"}
           panels={PANELS}
+        />
+        <BiomTypes
+          message="Ready to start wiping out waste?"
+          types={BIN_TYPES}
         />
         <NavigationMobile />
       </main>

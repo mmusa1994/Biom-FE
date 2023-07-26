@@ -8,6 +8,7 @@ import { twMerge } from "tailwind-merge";
 enum ButtonStyle {
   primary = "text-white bg-primary hover:bg-primary-hover",
   secondary = "text-primary bg-white hover:bg-gray",
+  tertiary = "text-primary bg-white hover:bg-gray border border-primary",
 }
 
 interface ButtonProps
@@ -15,8 +16,8 @@ interface ButtonProps
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  text?: string;
-  variant?: "primary" | "secondary";
+  text: string;
+  variant?: "primary" | "secondary" | "tertiary";
   icon?: JSX.Element | ReactNode;
 }
 
@@ -30,13 +31,13 @@ const Button: React.FC<ButtonProps> = ({
     <button
       {...restProps}
       className={twMerge(
-        `flex items-center gap-x-2 justify-center disabled:opacity-75 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-white w-full rounded-lg  py-2 md:py-3 hover:opacity-90 active:opacity-75`,
+        `flex items-center gap-x-2 justify-center disabled:opacity-75 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-white w-full rounded-lg hover:opacity-90 active:opacity-75`,
         ButtonStyle[variant],
         restProps.className
       )}
     >
-      {text}
-      {icon && icon}
+      <div className=" py-2 md:py-3">{text}</div>
+      {icon && <div className="border-l"> {icon}</div>}
     </button>
   );
 };
