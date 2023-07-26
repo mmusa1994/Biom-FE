@@ -9,11 +9,11 @@ interface GalleryProps {
 
 const Gallery: React.FC<GalleryProps> = ({ pictures }) => {
   return (
-    <div className="flex flex-col items-center my-10 gap-5">
+    <div className="flex flex-col items-center my-10 gap-5 w-full  max-w-[1440px]">
       <div className="chronicle-display font-extrabold text-[36px] leading-[44px] w-[274px] h-[44px] text-primary-dark">
         <span className="font-thin">#</span>cleanwithbiom
       </div>
-      <div className="flex items-center gap-6 w-full max-w-[1440px] overflow-scroll custom-scrollbar">
+      <div className="flex items-center gap-6 w-full overflow-scroll custom-scrollbar">
         {pictures.map((picture, index) => (
           <div key={index} className={index % 2 === 1 ? "mt-10" : ""}>
             <Card image={picture} isEven={index % 2 === 0} />

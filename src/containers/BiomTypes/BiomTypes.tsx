@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, ProgressiveImage } from "../../components";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { TBiomTypes, TTypes } from "../../helpers/types";
+
+import ArrowRightIcon from "../../assets/icons/Icon ionic-ios-arrow-round-forward@2x.png";
 
 const BiomTypes: React.FC<TBiomTypes> = ({ message, types }) => {
   return (
@@ -11,10 +12,17 @@ const BiomTypes: React.FC<TBiomTypes> = ({ message, types }) => {
           {message}
         </h4>
         <Button
-          className="brandon-grotesque-bold font-bold text-[13px] tracking-widest uppercase w-full h-[50px]"
+          className="brandon-grotesque-bold font-bold text-[13px] tracking-widest uppercase w-[296px] h-[50px] mt-5"
           variant="tertiary"
-          text="Choose your vessel color"
-          icon={<ArrowRightIcon className="w-5 h-4 ml-3" />}
+          text="CHOOSE YOUR VESSEL COLOR"
+          icon={
+            <ProgressiveImage
+              src={ArrowRightIcon}
+              placeholder={ArrowRightIcon}
+              alt="arrow-right"
+              className="w-6 h-4"
+            />
+          }
         />
       </div>
       <div className="flex items-center gap-0">
