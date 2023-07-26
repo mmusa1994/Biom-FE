@@ -109,3 +109,8 @@ export type TVideoSection = {
   actionText: string;
   video: string;
 };
+
+export type TCardProps = {
+  image: string;
+  isEven: boolean;
+};

@@ -4,6 +4,7 @@ import {
   Banner,
   BiomTypes,
   BiomWipes,
+  Gallery,
   NavigationDesktop,
   NavigationMobile,
   Video,
@@ -20,6 +21,7 @@ import "./App.css";
 import TestimonialCarousel from "./containers/TestimonialsCarousel/TestimonialsCarousel";
 import { TESTIMONIALS } from "./mock/testimonials";
 import { ADVANTAGES } from "./mock/advantages";
+import { GALLERY } from "./mock/gallery";
 
 function App() {
   return (
@@ -65,6 +67,7 @@ function App() {
           actionText="LEARN MORE"
           video="/videos/ocean.mp4"
         />
+        <Gallery pictures={GALLERY} />
       </main>
       <NavigationMobile />
       <footer></footer>

@@ -10,9 +10,9 @@ const VideoSection: React.FC<TVideoSection> = ({
   video,
 }) => {
   return (
-    <div className="relative  h-max xl:w-[1390px] xl:h-[675px] xl:rounded-[14px] overflow-hidden mt-10">
-      <div className="absolute flex flex-col items-center justify-center w-full z-10 bg-black bg-opacity-20 h-full">
-        <h3 className="font-normal text-xs md:text-base md:leading-[62px] font-brandon-grotesque md:tracking-widest text-sand uppercase">
+    <div className="relative h-max xl:w-[1390px] xl:h-[675px] xl:rounded-[14px] overflow-hidden mt-10">
+      <div className="absolute flex flex-col items-center justify-center w-full z-10 bg-green-300 bg-opacity-10 h-full">
+        <h3 className="font-normal text-xs md:text-base md:leading-[32px] font-brandon-grotesque md:tracking-widest text-sand uppercase">
           {title}
         </h3>
         <h5 className="chronicle-display font-extrabold text-[20px] md:text-[36px] md:leading-[62px] tracking-normal text-sand ">
