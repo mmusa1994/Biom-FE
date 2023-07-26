@@ -20,7 +20,7 @@ const BiomTypes: React.FC<TBiomTypes> = ({ message, types }) => {
               src={ArrowRightIcon}
               placeholder={ArrowRightIcon}
               alt="arrow-right"
-              className="w-6 h-4"
+              className="w-5 h-4"
             />
           }
         />

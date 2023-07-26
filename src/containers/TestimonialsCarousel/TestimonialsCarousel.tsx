@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useCarousel } from "../../hooks/useCarousel";
 import { CarouselContent } from "../../components/";
 import { ITestimonialCarouselProps } from "../../helpers/types";
@@ -7,29 +7,32 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = ({
   slides,
   title,
 }) => {
-  const { currentSlide, nextSlide, previousSlide } = useCarousel(slides.length);
+  const {
+    currentSlide,
+    nextSlide,
+    previousSlide,
+    handleMouseDown,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+  } = useCarousel(slides.length);
+  const [activeDot, setActiveDot] = useState<number>(currentSlide);
 
-  const handleMouseDown = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    const startX = event.clientX;
+  useEffect(() => {
+    setActiveDot(currentSlide);
+  }, [currentSlide]);
 
-    const handleMouseMove = (event: MouseEvent) => {
-      const diffX = event.clientX - startX;
-      if (diffX > 50) {
-        previousSlide();
-      } else if (diffX < -50) {
+  const handleMouseDownByDot = (index: number) => {
+    setActiveDot(index);
+    if (index > currentSlide) {
+      for (let i = currentSlide; i < index; i++) {
         nextSlide();
       }
-    };
-
-    const handleMouseUp = () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
+    } else if (index < currentSlide) {
+      for (let i = currentSlide; i > index; i--) {
+        previousSlide();
+      }
+    }
   };
 
   return (
@@ -39,15 +42,12 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = ({
         slides={slides}
         currentSlide={currentSlide}
         handleMouseDown={handleMouseDown}
+        handleTouchStart={handleTouchStart}
+        handleTouchMove={handleTouchMove}
+        handleTouchEnd={handleTouchEnd}
+        activeDot={activeDot}
+        handleMouseDownByDot={handleMouseDownByDot}
       />
-      <div className="carousel-dots absolute bottom-3 lg:bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {slides.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentSlide ? "active" : ""}`}
-          ></span>
-        ))}
-      </div>
     </div>
   );
 };

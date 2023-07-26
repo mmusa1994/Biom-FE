@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode, TouchEventHandler } from "react";
 
 export type TProgressiveImage = {
   src: string;
@@ -67,9 +67,12 @@ export interface ICarouselContentProps {
   title: string;
   slides: TSlide[];
   currentSlide: number;
-  handleMouseDown: (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => void;
+  handleMouseDown: MouseEventHandler<HTMLDivElement>;
+  activeDot: number;
+  handleMouseDownByDot: (index: number) => void;
+  handleTouchStart: TouchEventHandler<HTMLDivElement>;
+  handleTouchMove: TouchEventHandler<HTMLDivElement>;
+  handleTouchEnd: TouchEventHandler<HTMLDivElement>;
 }
 
 export interface ITestimonialCarouselProps {
