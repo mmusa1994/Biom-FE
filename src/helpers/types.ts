@@ -57,3 +57,22 @@ export type TBiomTypes = {
   types?: TTypes[];
   message: string;
 };
+
+export type TSlide = {
+  text: string;
+  author: string;
+};
+
+export interface ICarouselContentProps {
+  title: string;
+  slides: TSlide[];
+  currentSlide: number;
+  handleMouseDown: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => void;
+}
+
+export interface ITestimonialCarouselProps {
+  slides: TSlide[];
+  title: string;
+}

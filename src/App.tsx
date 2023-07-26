@@ -15,12 +15,14 @@ import Kitchen from "./assets/kitchen.png";
 import MeetBiomBG from "./assets/maskBiom.png";
 
 import "./App.css";
+import TestimonialCarousel from "./containers/TestimonialsCarousel/TestimonialsCarousel";
+import { TESTIMONIALS } from "./mock/testimonials";
 
 function App() {
   return (
     <div className="App">
       <NavigationDesktop />
-      <main className="w-full flex flex-col justify-start items-center">
+      <main className="w-full flex flex-col justify-start items-center mb-5 lg:mb-0">
         <Banner
           title="So fresh. So green."
           description="We believe that a more eco-friendly everyday makes a happier you and me. We're on a mission to put sustainability in reach with better-for-the-planet wipes that are easy, effective, and plastic-free."
@@ -43,8 +45,12 @@ function App() {
           message="Ready to start wiping out waste?"
           types={BIN_TYPES}
         />
-        <NavigationMobile />
+        <TestimonialCarousel
+          title="WHAT PEOPLE ARE SAYING"
+          slides={TESTIMONIALS}
+        />
       </main>
+      <NavigationMobile />
       <footer></footer>
     </div>
   );

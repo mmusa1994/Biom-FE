@@ -41,6 +41,7 @@
   scrollbar-width: none;
 }
 
+/* MEET BIOM ANIMATION */
 @keyframes scrollText {
   from {
     transform: translateY(0);
@@ -52,4 +53,49 @@
 
 .animate-scrolling {
   animation: scrollText 10s linear infinite;
+}
+
+/* CAROUSEL */
+
+.testimonial-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonial-slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 16px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #004a4c;
+}
+
+.dot.active {
+  background-color: #004a4c;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and newer versions of Firefox */
 }
