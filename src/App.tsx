@@ -6,6 +6,7 @@ import {
   BiomWipes,
   NavigationDesktop,
   NavigationMobile,
+  Video,
 } from "./containers";
 import { MeeTBiom } from "./containers";
 import { SERVICES } from "./mock/services";
@@ -55,7 +56,14 @@ function App() {
           listOfAdvantages={ADVANTAGES}
           title="BIOM WIPES"
           subtitle="Better for you, and the planet."
-          description="The experience of clean should feel amazing. In a time when we’re constantly sanitizing, it can be damaging to our hands and skins. We decided to load our wipes with Aloe to take care of you, while you take care of your home."
+          description="The experience of clean should feel amazing. In a time when we're constantly sanitizing, it can be damaging to our hands and skins. We decided to load our wipes with Aloe to take care of you, while you take care of your home."
+        />
+        <Video
+          title="CLEANING OUR OCEANS WITH EVERY WIPE"
+          subtitle="Wipes have plastic in them. We don't."
+          description="We reinvented wipes to cut out all the bad stuff —like single-use plastic that hurts the environment, and toxic chemicals that don’t belong in our oceans (or in our homes)."
+          actionText="LEARN MORE"
+          video="/videos/ocean.mp4"
         />
       </main>
       <NavigationMobile />

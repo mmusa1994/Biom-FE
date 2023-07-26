@@ -27,9 +27,9 @@ const BiomWipes: React.FC<TBiomWipes> = ({
       />
       <div className="relative xl:absolute right-0 top-10 z-0 flex flex-col gap-4 bg-[#DAE5E5] rounded-lg w-full mx-5 xl:md-0 xl:w-[858px] h-max xl:h-[606px] items-end p-20">
         <div className="flex flex-col items-start min-h-[300px] sm:min-h-max">
-          <h4 className="font-normal text-base leading-[62px] font-brandon-grotesque tracking-widest text-primary-dark uppercase">
+          <h3 className="font-normal text-base leading-[62px] font-brandon-grotesque tracking-widest text-primary-dark uppercase">
             {title}
-          </h4>
+          </h3>
           <h5 className="chronicle-display font-extrabold text-[28px] md:text-[36px] leading-[44px] tracking-normal text-black">
             {subtitle}
           </h5>

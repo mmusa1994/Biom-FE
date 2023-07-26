@@ -89,3 +89,23 @@ export type TBiomWipes = {
   subtitle: string;
   description: string;
 };
+
+export type PreloadValue = "" | "none" | "metadata" | "auto";
+
+export interface IProgressiveVideoProps {
+  src: string;
+  preload: PreloadValue;
+  autoplay?: boolean;
+  loop?: boolean;
+  className?: string;
+  width?: string;
+  height?: string;
+}
+
+export type TVideoSection = {
+  title: string;
+  subtitle: string;
+  description: string;
+  actionText: string;
+  video: string;
+};
