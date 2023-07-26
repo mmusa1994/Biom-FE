@@ -9,7 +9,7 @@ import {
 import { MeeTBiom } from "./containers";
 import { SERVICES } from "./mock/services";
 import { PANELS } from "./mock/panels";
-import { BIN_TYPES } from "./mock/types";
+import { BIN_TYPES } from "./mock/bin-types";
 
 import Kitchen from "./assets/kitchen.png";
 import MeetBiomBG from "./assets/maskBiom.png";

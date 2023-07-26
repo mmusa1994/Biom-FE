@@ -36,8 +36,10 @@ const Button: React.FC<ButtonProps> = ({
         restProps.className
       )}
     >
-      <div className=" py-2 md:py-3">{text}</div>
-      {icon && <div className="border-l"> {icon}</div>}
+      {text}
+      {icon && (
+        <div className="flex items-center border-l py-0 h-full"> {icon}</div>
+      )}
     </button>
   );
 };
