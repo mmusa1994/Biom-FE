@@ -5,3 +5,4 @@ export { default as MeeTBiom } from "./MeetBiom/MeeTBiom";
 export { default as ADPanels } from "./ADPanels/ADPanels";
 export { default as BiomTypes } from "./BiomTypes/BiomTypes";
 export { default as TestimonialsCarousel } from "./TestimonialsCarousel/TestimonialsCarousel";
+export { default as BiomWipes } from "./BiomWipes/BiomWipes";

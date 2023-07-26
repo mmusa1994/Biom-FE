@@ -22,7 +22,7 @@ const BiomTypes: React.FC<TBiomTypes> = ({ message, types }) => {
           types?.map((el: TTypes, i: number) => (
             <figure key={el.id}>
               <ProgressiveImage
-                className="min-w-[130px] h-[130px] md:w-[180px] md:h-[180px] xl:min-w-[360px] xl:h-[360px]"
+                className="min-w-[80px] h-[80px] sm:min-w-[130px] sm:h-[130px] md:w-[180px] md:h-[180px] xl:min-w-[360px] xl:h-[360px]"
                 src={el.image}
                 placeholder={el.image}
                 alt={`bin #${i}`}

@@ -76,3 +76,16 @@ export interface ITestimonialCarouselProps {
   slides: TSlide[];
   title: string;
 }
+
+export type TListOfAdvantages = {
+  id: number;
+  icon: string;
+  text: string;
+};
+
+export type TBiomWipes = {
+  listOfAdvantages: TListOfAdvantages[];
+  title: string;
+  subtitle: string;
+  description: string;
+};

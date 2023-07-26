@@ -3,6 +3,7 @@ import {
   ADPanels,
   Banner,
   BiomTypes,
+  BiomWipes,
   NavigationDesktop,
   NavigationMobile,
 } from "./containers";
@@ -17,6 +18,7 @@ import MeetBiomBG from "./assets/maskBiom.png";
 import "./App.css";
 import TestimonialCarousel from "./containers/TestimonialsCarousel/TestimonialsCarousel";
 import { TESTIMONIALS } from "./mock/testimonials";
+import { ADVANTAGES } from "./mock/advantages";
 
 function App() {
   return (
@@ -48,6 +50,12 @@ function App() {
         <TestimonialCarousel
           title="WHAT PEOPLE ARE SAYING"
           slides={TESTIMONIALS}
+        />
+        <BiomWipes
+          listOfAdvantages={ADVANTAGES}
+          title="BIOM WIPES"
+          subtitle="Better for you, and the planet."
+          description="The experience of clean should feel amazing. In a time when we’re constantly sanitizing, it can be damaging to our hands and skins. We decided to load our wipes with Aloe to take care of you, while you take care of your home."
         />
       </main>
       <NavigationMobile />
