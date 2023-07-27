@@ -1,4 +1,16 @@
+import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import { MouseEventHandler, ReactNode, TouchEventHandler } from "react";
+
+export interface IButtonProps
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
+  text?: string;
+  variant?: "primary" | "secondary" | "tertiary";
+  icon?: JSX.Element | ReactNode;
+  iconMove?: JSX.Element | ReactNode;
+}
 
 export type TProgressiveImage = {
   src: string;

@@ -1,48 +1,54 @@
-import React, {
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
-  ReactNode,
-} from "react";
+import React from "react";
 import { twMerge } from "tailwind-merge";
+import { IButtonProps } from "../../helpers/types";
 
 enum ButtonStyle {
   primary = "text-white bg-primary hover:bg-primary-hover",
-  secondary = "text-primary bg-white hover:bg-gray",
-  tertiary = "text-primary bg-white hover:bg-gray border border-primary-dark",
+  secondary = "text-primary bg-white hover:bg-gray px-2",
+  tertiary = "text-primary bg-white  border border-primary-dark",
 }
 
-interface ButtonProps
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
-  text?: string;
-  variant?: "primary" | "secondary" | "tertiary";
-  icon?: JSX.Element | ReactNode;
-}
-
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<IButtonProps> = ({
   text,
   variant = "primary",
   icon,
+  iconMove,
   ...restProps
-}: ButtonProps) => {
+}: IButtonProps) => {
   return (
     <button
       {...restProps}
       className={twMerge(
-        `h-full flex items-center gap-x-2 justify-center disabled:opacity-75 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-white w-full rounded-lg hover:opacity-90 active:opacity-75 px-2`,
+        `h-full flex items-center gap-x-2 justify-center disabled:opacity-75 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-white rounded-lg hover:opacity-90 active:opacity-75 overflow-hidden group`,
         ButtonStyle[variant],
         restProps.className
       )}
     >
-      {text}
+      <div
+        className={`flex items-center justify-center 
+        ${variant === "tertiary" && " h-full px-2"}
+        ${iconMove && "border-r"}
+        `}
+      >
+        {text}
+      </div>
+
       {icon && (
         <div
-          className={`flex items-center 
-        ${variant === "tertiary" && "border-l py-0 h-full pl-3"}`}
+          className={`flex items-center justify-center 
+        ${variant === "tertiary" &&
+          "border-l py-0 h-full px-3 group-hover:bg-primary transition-colors duration-500"}
+          ${!text &&
+            "h-full w-full min-w-[44px] pr-2 transition-transform duration-300 hover:transform hover:translate-x-1"}
+          `}
         >
           {icon}
+        </div>
+      )}
+
+      {iconMove && (
+        <div className="flex items-center justify-center pl-2 pr-4 h-full transition-transform duration-300 group-hover:transform group-hover:translate-x-1">
+          {iconMove}
         </div>
       )}
     </button>

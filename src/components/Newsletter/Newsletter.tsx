@@ -28,14 +28,14 @@ const Newsletter: React.FC<TNewsletter> = ({ title, description }) => {
           onChange={handleChange}
         />
         <Button
-          className="w-[44px] h-[38px]"
+          className="w-max h-[38px]"
           variant="primary"
           icon={
             <ProgressiveImage
               src={ArrowRightIcon}
               placeholder={ArrowRightIcon}
               alt="arrow-right"
-              className="w-5 h-4 brightness-0 invert"
+              className="w-4 h-3 brightness-0 invert"
             />
           }
         />

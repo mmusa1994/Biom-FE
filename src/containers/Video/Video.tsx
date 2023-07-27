@@ -10,7 +10,7 @@ const VideoSection: React.FC<TVideoSection> = ({
   video,
 }) => {
   return (
-    <div className="relative h-max w-full min-[1390]:w-[1390px] xl:h-[675px] xl:rounded-[14px] overflow-hidden mt-10">
+    <div className="relative h-max w-full xl:w-[1390px] xl:h-[675px] xl:rounded-[14px] overflow-hidden mt-10">
       <div className="absolute flex flex-col items-center justify-center w-full z-10 bg-green-300 bg-opacity-10 h-full">
         <h3 className="font-normal text-xs md:text-base md:leading-[32px] font-brandon-grotesque md:tracking-widest text-sand uppercase">
           {title}
@@ -22,7 +22,7 @@ const VideoSection: React.FC<TVideoSection> = ({
           {description}
         </p>
         <Button
-          className="brandon-grotesque-bold tracking-widest uppercase font-[900] text-xs md:text-[13px] leading-[30px] max-w-[171px] h-[40px] md:h-[52px] md:mt-4"
+          className="brandon-grotesque-bold tracking-widest uppercase font-[900] text-xs md:text-[13px] leading-[30px] w-[171px] h-[40px] md:h-[52px] md:mt-4"
           text={actionText}
           variant="secondary"
         />

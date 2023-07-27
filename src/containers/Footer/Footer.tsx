@@ -51,9 +51,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row w-full items-center gap-2 max-w-[1302px] px-4 xl:px-0 justify-between border-t border-primary-dark mt-10 py-10 ">
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center gap-1">
             <label className="brandon-grotesque text-[14px] leading[22px] text-sand">
-              © 2021 biom. All rights reserved{" "}
+              © 2021 biom. All rights reserved •
             </label>
             <label className="brandon-grotesque text-[14px] leading[22px] text-sand">
               Privacy Policy • Terms of Service

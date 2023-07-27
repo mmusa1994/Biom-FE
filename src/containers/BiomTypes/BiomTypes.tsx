@@ -12,15 +12,15 @@ const BiomTypes: React.FC<TBiomTypes> = ({ message, types }) => {
           {message}
         </h4>
         <Button
-          className="brandon-grotesque-bold font-bold text-[13px] tracking-widest uppercase w-[296px] h-[50px] mt-5"
+          className="brandon-grotesque-bold font-bold text-[13px] tracking-widest uppercase w-max h-[50px] mt-5"
           variant="tertiary"
           text="CHOOSE YOUR VESSEL COLOR"
-          icon={
+          iconMove={
             <ProgressiveImage
               src={ArrowRightIcon}
               placeholder={ArrowRightIcon}
               alt="arrow-right"
-              className="w-5 h-4"
+              className="w-4 h-3"
             />
           }
         />
