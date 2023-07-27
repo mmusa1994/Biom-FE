@@ -98,3 +98,9 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and newer versions of Firefox */
 }
+
+.calc-form {
+  --tw-calc-form: calc(
+    100% - 8rem
+  ); /* Adjust the "8rem" to your desired value */
+}

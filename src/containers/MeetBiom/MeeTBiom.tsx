@@ -11,7 +11,7 @@ const MeeTBiom: React.FC<TMeeTBiom> = ({
 }) => {
   return (
     <ProgressiveImage
-      className="relative w-[300px] sm:w-[500px] md:w-[760px] lg:w-[1020px] xl:w-[1390px] h-[630px] xl:h-[730px] bg-transparent"
+      className="relative h-auto w-[300px] sm:w-[500px] md:w-[760px] lg:w-full xl:max-w-[1390px]  xl:h-[730px] bg-transparent"
       src={image}
       placeholder={image}
       alt="MeetBiom"

@@ -12,7 +12,7 @@ const itemsClass =
 const Footer: React.FC = () => {
   return (
     <footer className="relative w-full flex flex-col xl:flex-row justify-center bg-primary bg-opacity-[72%] h-[500px] md:h-[386px] md:mt-[200px] pb-14 md:pb-0">
-      <div className="hidden md:block md:absolute md:top-[-40%] bg-gray rounded-[14px] w-full  min-[1304px]:w-[1302px] h-[300px]">
+      <div className="hidden md:block md:absolute md:top-[-40%] bg-gray rounded-[14px] w-calc-form min-[1304px]:w-[1302px] h-[300px]">
         <div className="absolute top-10 xl:top-12 left-20">
           <Newsletter
             title="Get the latest news delivered to your inbox."
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           />
         </div>
         <ProgressiveImage
-          className="w-full h-full"
+          className="w-full h-full cover"
           src={FooterBin}
           placeholder={FooterBin}
           alt="BinFooter"

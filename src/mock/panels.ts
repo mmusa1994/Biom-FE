@@ -1,6 +1,7 @@
 import Kitchen from "../assets/panels/Kitchen Shot_3@2x.png";
 import Office from "../assets/panels/office@2x.png";
 import LivingRoom from "../assets/panels/Living Room_1@2x.png";
+import Bathroom from "../assets/panels/bathroom_white on counter@2x.png";
 
 export const PANELS = [
   {
@@ -14,5 +15,9 @@ export const PANELS = [
   {
     id: 3,
     image: Kitchen,
+  },
+  {
+    id: 4,
+    image: Bathroom,
   },
 ];

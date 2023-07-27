@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       {...restProps}
       className={twMerge(
-        `flex items-center gap-x-2 justify-center disabled:opacity-75 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-white w-full rounded-lg hover:opacity-90 active:opacity-75 px-2`,
+        `h-full flex items-center gap-x-2 justify-center disabled:opacity-75 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-white w-full rounded-lg hover:opacity-90 active:opacity-75 px-2`,
         ButtonStyle[variant],
         restProps.className
       )}

@@ -16,7 +16,7 @@ const Banner: React.FC<TBanner> = ({
 }) => {
   return (
     <ProgressiveImage
-      className="relative w-[350px] sm:w-[500px] md:w-[760px] lg:w-[1020px] xl:w-[1390px] xl:min-h-[675px] rounded-lg my-2"
+      className="relative w-full xl:max-w-[1390px] xl:min-h-[675px] xl:rounded-lg mt-0 mb-2 md:my-2"
       src={image}
       placeholder={image}
       alt="Kitchen"
@@ -27,7 +27,7 @@ const Banner: React.FC<TBanner> = ({
         <h2 className="chronicle-display font-semibold text-[25px] sm:text-[30px] md:text-[43px] lg:text-[56px] leading-[62px]  max-w-[237px]">
           {title}
         </h2>
-        <p className="brandon-grotesque text-sm md:text-base lg:text-lg xl:text-[20px] leading-7 tracking-normal my-3">
+        <p className="brandon-grotesque w-full text-sm md:text-base lg:text-lg xl:text-[20px] leading-7 tracking-normal my-3 xl:w-[407px]">
           {description}
         </p>
         <Button
