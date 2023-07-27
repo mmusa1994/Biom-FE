@@ -66,7 +66,7 @@ export const useCarousel = (totalSlides: number) => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [nextSlide]);
 
   return {
     currentSlide,
