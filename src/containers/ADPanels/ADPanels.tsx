@@ -3,7 +3,7 @@ import { TADPanels, TPanels } from "../../helpers/types";
 
 const ADPanels: React.FC<TADPanels> = ({ title, subtitle, panels }) => {
   return (
-    <section className="relative w-full max-w-[1440px] overflow-auto custom-scrollbar md:my-10">
+    <section className="relative w-full max-w-[1440px] overflow-auto custom-scrollbar mt-10 md:my-10">
       <div className="z-10 absolute left-10 top-10 xl:left-[41%] xl:top-[30%] flex flex-col items-center justify-center w-[250px] md:w-[336px]">
         <label className="brandon-grotesque text-center font-normal text-sm xl:text-base leading-6 tracking-wider text-white uppercase">
           {subtitle}

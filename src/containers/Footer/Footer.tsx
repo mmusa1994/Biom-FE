@@ -11,8 +11,8 @@ const itemsClass =
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative w-full flex flex-col xl:flex-row justify-center bg-primary bg-opacity-[72%] h-[500px] md:h-[386px] md:mt-[200px] pb-14 md:pb-0">
-      <div className="hidden md:block md:absolute md:top-[-40%] bg-gray rounded-[14px] w-calc-form min-[1304px]:w-[1302px] h-[300px]">
+    <footer className="relative w-full flex flex-col xl:flex-row justify-center bg-primary bg-opacity-[72%] h-[500px] md:h-[386px] md:mt-[200px] pb-20 md:pb-0">
+      <div className="hidden md:block md:absolute md:top-[-40%] bg-gray xl:rounded-[14px] w-calc-form min-[1304px]:w-[1302px] h-[300px]">
         <div className="absolute top-10 xl:top-12 left-20">
           <Newsletter
             title="Get the latest news delivered to your inbox."
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col md:flex-row w-full items-center gap-2 max-w-[1302px] px-4 xl:px-0 justify-between border-t border-primary-dark mt-10 py-10 ">
+        <div className="flex flex-col md:flex-row w-full items-center gap-2 max-w-[1302px] px-4 xl:px-0 justify-between border-t border-primary-dark mt-5 py-5 md:mt-10 md:py-10 ">
           <div className="flex flex-col md:flex-row items-center gap-1">
             <label className="brandon-grotesque text-[14px] leading[22px] text-sand">
               © 2021 biom. All rights reserved •

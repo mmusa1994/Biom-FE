@@ -47,7 +47,7 @@ const Button: React.FC<IButtonProps> = ({
       )}
 
       {iconMove && (
-        <div className="flex items-center justify-center pl-2 pr-4 h-full transition-transform duration-300 group-hover:transform group-hover:translate-x-1">
+        <div className="flex items-center justify-center pl-3 pr-4 h-full transition-transform duration-300 group-hover:transform group-hover:translate-x-1">
           {iconMove}
         </div>
       )}

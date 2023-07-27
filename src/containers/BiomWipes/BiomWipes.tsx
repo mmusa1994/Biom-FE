@@ -54,7 +54,7 @@ const BiomWipes: React.FC<TBiomWipes> = ({
         </div>
         <Button
           text="subscribe now"
-          className="brandon-grotesque-bold md:w-[207px] h-[50px] xl:absolute xl:bottom-[-4%] xl:left-[33%] font-bold text-[13px] tracking-widest uppercase"
+          className="brandon-grotesque-bold min-w-[207px] h-[50px] xl:absolute xl:bottom-[-4%] xl:left-[33%] font-bold text-[13px] tracking-widest uppercase"
         />
       </div>
     </div>

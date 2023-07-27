@@ -16,7 +16,7 @@ const Banner: React.FC<TBanner> = ({
 }) => {
   return (
     <ProgressiveImage
-      className="relative w-full xl:max-w-[1390px] xl:min-h-[675px] xl:rounded-lg mt-0 mb-2 md:my-2"
+      className="relative w-full xl:max-w-[1390px] xl:min-h-[675px] xl:rounded-lg mt-2 md:my-2"
       src={image}
       placeholder={image}
       alt="Kitchen"

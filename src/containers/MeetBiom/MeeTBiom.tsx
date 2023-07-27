@@ -24,6 +24,7 @@ const MeeTBiom: React.FC<TMeeTBiom> = ({
           </h1>
         </div>
       </div>
+
       <div className="w-full flex flex-col items-end justify-start text-black0 mt-24 xl:pr-40 text-primary">
         <div className="max-w-[565px] flex flex-col gap-4">
           <h5 className="brandon-grotesque font-normal text-[10px] md:text-base leading-8 tracking-widest uppercase">
