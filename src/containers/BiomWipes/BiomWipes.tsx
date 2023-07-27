@@ -12,7 +12,7 @@ const BiomWipes: React.FC<TBiomWipes> = ({
   description,
 }) => {
   return (
-    <div className="flex justify-center relative w-full max-w-[1340px] h-max xl:min-h-[700px] my-2 md:my-10">
+    <div className="flex justify-center relative w-full max-w-[1340px] h-max xl:min-h-[700px] my-5 md:my-10">
       <ProgressiveImage
         className="hidden xl:block absolute z-10 left-0 w-[496px] h-[622px]"
         src={AdobeStock}
@@ -25,7 +25,7 @@ const BiomWipes: React.FC<TBiomWipes> = ({
         placeholder={RefillBiom}
         alt="stock"
       />
-      <div className="relative xl:absolute right-0 top-10 z-0 flex flex-col gap-4 bg-[#DAE5E5] rounded-lg w-full mx-5 xl:md-0 xl:w-[858px] h-max xl:h-[606px] items-end p-20">
+      <div className="relative xl:absolute right-0 top-10 z-0 flex flex-col gap-4 bg-[#DAE5E5] xl:rounded-[12px] w-full  xl:md-0 xl:w-[858px] h-max xl:h-[606px] xl:items-end p-10 md:p-20">
         <div className="flex flex-col items-start min-h-[300px] sm:min-h-max">
           <h3 className="font-normal text-base leading-[62px] font-brandon-grotesque tracking-widest text-primary-dark uppercase">
             {title}
@@ -54,7 +54,7 @@ const BiomWipes: React.FC<TBiomWipes> = ({
         </div>
         <Button
           text="subscribe now"
-          className="brandon-grotesque-bold min-w-[207px] h-[50px] xl:absolute xl:bottom-[-4%] xl:left-[33%] font-bold text-[13px] tracking-widest uppercase"
+          className="brandon-grotesque-bold  min-w-[207px] max-w-[207px] h-[50px] xl:absolute xl:bottom-[-4%] xl:left-[33%] font-bold text-[13px] tracking-widest uppercase self-center"
         />
       </div>
     </div>
