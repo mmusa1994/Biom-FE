@@ -16,6 +16,7 @@ React.js, Typescript, Tailwind
 # Functionality on this site:
 
 - Full responsiveness for Mobile, Tablet, Desktop.
+- Progressive images and video
 - Animation for meet Biom text.
 - Scrollable rooms section.
 - Biom types section transitions.
