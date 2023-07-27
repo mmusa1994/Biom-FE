@@ -52,6 +52,7 @@ export type TMeeTBiom = {
 export type TPanels = {
   id: number;
   image: string;
+  name: string;
 };
 
 export type TADPanels = {

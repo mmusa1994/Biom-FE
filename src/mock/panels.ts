@@ -7,17 +7,21 @@ export const PANELS = [
   {
     id: 1,
     image: LivingRoom,
+    name: "living room",
   },
   {
     id: 2,
     image: Office,
+    name: "office",
   },
   {
     id: 3,
     image: Kitchen,
+    name: "kitchen",
   },
   {
     id: 4,
     image: Bathroom,
+    name: "bathroom",
   },
 ];

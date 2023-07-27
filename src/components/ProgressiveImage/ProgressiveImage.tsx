@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { TProgressiveImage } from "../../helpers/types";
 
-const ImageLoad: React.FC<TProgressiveImage> = React.memo(
+const ProgressiveImage: React.FC<TProgressiveImage> = React.memo(
   ({
     src,
     placeholder,
@@ -53,4 +53,4 @@ const ImageLoad: React.FC<TProgressiveImage> = React.memo(
   }
 );
 
-export default ImageLoad;
+export default ProgressiveImage;
