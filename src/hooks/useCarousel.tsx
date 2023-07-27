@@ -1,12 +1,12 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 export const useCarousel = (totalSlides: number) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const startXRef = useRef<number>(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-  };
+  }, [totalSlides]);
 
   const previousSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);

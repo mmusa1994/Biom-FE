@@ -27,6 +27,7 @@ const VideoSection: React.FC<TVideoSection> = ({
           variant="secondary"
         />
       </div>
+
       <ProgressiveVideo
         className=""
         src={video}

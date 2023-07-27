@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IProgressiveVideoProps } from "../../helpers/types";
 
 const ProgressiveVideo: React.FC<IProgressiveVideoProps> = ({
@@ -6,55 +6,50 @@ const ProgressiveVideo: React.FC<IProgressiveVideoProps> = ({
   preload,
   autoplay = false,
   loop = false,
-  width,
-  height,
   className,
 }) => {
   const [canPlay, setCanPlay] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
-    const video = document.createElement("video");
-    video.src = src;
+    if (videoRef.current) {
+      const video = videoRef.current;
 
-    const canPlayHandler = () => {
-      setCanPlay(true);
-      video.removeEventListener("canplay", canPlayHandler);
-    };
+      const canPlayHandler = () => {
+        setCanPlay(true);
+      };
 
-    video.addEventListener("canplay", canPlayHandler);
+      video.addEventListener("canplay", canPlayHandler);
 
-    if (["", "none", "metadata", "auto"].includes(preload)) {
-      video.preload = preload;
+      if (["", "none", "metadata", "auto"].includes(preload)) {
+        video.preload = preload as any;
+      }
+
+      if (autoplay) {
+        video.autoplay = true;
+        video.muted = true;
+      }
+
+      return () => {
+        video.removeEventListener("canplay", canPlayHandler);
+      };
     }
-
-    if (autoplay) {
-      video.autoplay = true;
-      video.muted = true;
-    }
-
-    return () => {
-      video.removeEventListener("canplay", canPlayHandler);
-    };
   }, [src, preload, autoplay]);
 
   return (
     <div className={className}>
-      {canPlay ? (
-        <video
-          className="cover"
-          autoPlay={autoplay}
-          controls={false}
-          muted={autoplay}
-          loop={loop}
-          width={width}
-          height={height}
-        >
-          <source src={src} type="video/mp4" />
-          Your browser does not support the video element.
-        </video>
-      ) : (
-        <div className="w-full h-full bg-sand" />
-      )}
+      <video
+        ref={videoRef}
+        className="cover"
+        autoPlay={autoplay}
+        controls={false}
+        muted={autoplay}
+        loop={loop}
+      >
+        <source src={process.env.PUBLIC_URL + src} type="video/mp4" />
+        Your browser does not support the video element.
+      </video>
+      {!canPlay && <div className="w-full h-full bg-sand" />}
     </div>
   );
 };

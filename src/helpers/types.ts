@@ -116,8 +116,6 @@ export interface IProgressiveVideoProps {
   autoplay?: boolean;
   loop?: boolean;
   className?: string;
-  width?: string;
-  height?: string;
 }
 
 export type TVideoSection = {
