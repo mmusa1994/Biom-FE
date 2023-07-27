@@ -8,3 +8,4 @@ export { default as TestimonialsCarousel } from "./TestimonialsCarousel/Testimon
 export { default as BiomWipes } from "./BiomWipes/BiomWipes";
 export { default as Video } from "./Video/Video";
 export { default as Gallery } from "./Gallery/Gallery";
+export { default as Footer } from "./Footer/Footer";

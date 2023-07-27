@@ -16,7 +16,7 @@ interface ButtonProps
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  text: string;
+  text?: string;
   variant?: "primary" | "secondary" | "tertiary";
   icon?: JSX.Element | ReactNode;
 }
@@ -38,7 +38,10 @@ const Button: React.FC<ButtonProps> = ({
     >
       {text}
       {icon && (
-        <div className="flex items-center border-l py-0 h-full pl-3">
+        <div
+          className={`flex items-center 
+        ${variant === "tertiary" && "border-l py-0 h-full pl-3"}`}
+        >
           {icon}
         </div>
       )}

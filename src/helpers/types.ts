@@ -117,3 +117,13 @@ export type TCardProps = {
   image: string;
   isEven: boolean;
 };
+
+export type TSocials = {
+  id: number;
+  icon: string;
+};
+
+export type TNewsletter = {
+  title: string;
+  description: string;
+};

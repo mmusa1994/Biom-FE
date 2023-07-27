@@ -37,7 +37,7 @@ const NavigationDesktop: React.FC = () => {
                 />
                 <div className="absolute right-[-40%] top-[-30%] bg-gold w-5 h-5 rounded-full border border-white text-white flex items-center justify-center">
                   <span className="text-xs absolute right-[18%] top-[5%]">
-                    0
+                    {/* SHOULD ADDED DYNAMIC */}0
                   </span>
                 </div>
               </div>

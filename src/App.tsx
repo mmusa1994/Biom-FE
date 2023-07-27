@@ -4,6 +4,7 @@ import {
   Banner,
   BiomTypes,
   BiomWipes,
+  Footer,
   Gallery,
   NavigationDesktop,
   NavigationMobile,
@@ -70,7 +71,7 @@ function App() {
         <Gallery pictures={GALLERY} />
       </main>
       <NavigationMobile />
-      <footer></footer>
+      <Footer />
     </div>
   );
 }
