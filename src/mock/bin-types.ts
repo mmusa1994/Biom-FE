@@ -6,13 +6,19 @@ export const BIN_TYPES = [
   {
     id: 1,
     image: GreenBin,
+    textHead: "Biom Dispenser",
+    model: "ocean teal",
   },
   {
     id: 2,
     image: WhiteBin,
+    textHead: "Biom Dispenser",
+    model: "white",
   },
   {
     id: 3,
     image: BlackBin,
+    textHead: "Biom Dispenser",
+    model: "ink black",
   },
 ];

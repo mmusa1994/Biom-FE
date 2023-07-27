@@ -98,14 +98,3 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and newer versions of Firefox */
 }
-
-/* Custom CSS */
-.group:hover .group-hover\:scale-105 {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-
-.group:hover .group-hover\:show-label {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}

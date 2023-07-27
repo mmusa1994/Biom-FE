@@ -64,6 +64,8 @@ export type TADPanels = {
 export type TTypes = {
   id: number;
   image: string;
+  textHead: string;
+  model: string;
 };
 
 export type TBiomTypes = {
