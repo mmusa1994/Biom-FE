@@ -4,7 +4,7 @@ import { IButtonProps } from "../../helpers/types";
 
 enum ButtonStyle {
   primary = "text-white bg-primary hover:bg-primary-hover",
-  secondary = "text-primary bg-white hover:bg-gray px-2",
+  secondary = "text-primary bg-white hover:bg-gray",
   tertiary = "text-primary bg-white  border border-primary-dark",
 }
 
@@ -19,7 +19,7 @@ const Button: React.FC<IButtonProps> = ({
     <button
       {...restProps}
       className={twMerge(
-        `h-full flex items-center gap-x-2 justify-center disabled:opacity-75 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-white rounded-lg hover:opacity-90 active:opacity-75 overflow-hidden group`,
+        `h-full flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-white rounded-lg hover:opacity-90 active:opacity-75 overflow-hidden group`,
         ButtonStyle[variant],
         restProps.className
       )}
@@ -37,9 +37,9 @@ const Button: React.FC<IButtonProps> = ({
         <div
           className={`flex items-center justify-center 
         ${variant === "tertiary" &&
-          "border-l py-0 h-full px-3 group-hover:bg-primary transition-colors duration-500"}
+          "py-0 h-full border-l px-3 group-hover:bg-primary transition-colors duration-500"}
           ${!text &&
-            "h-full w-full min-w-[44px] pr-2 transition-transform duration-300 hover:transform hover:translate-x-1"}
+            "h-full w-full min-w-[44px] px-2 transition-transform duration-300 hover:transform hover:translate-x-1"}
           `}
         >
           {icon}

@@ -21,7 +21,7 @@ const Gallery: React.FC<GalleryProps> = ({ pictures }) => {
         ))}
       </div>
       <Button
-        className="brandon-grotesque-bold font-bold text-[13px] tracking-widest uppercase max-w-[277px] h-[50px] mt-5 group"
+        className="brandon-grotesque-bold font-bold text-[13px] tracking-widest uppercase w-max h-[50px] mt-5 group"
         variant="tertiary"
         text="Follow us on instagram"
         icon={
