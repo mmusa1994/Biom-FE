@@ -5,7 +5,7 @@ const MobileNavigation: React.FC = () => {
   return (
     <div
       className="w-[359px] h-20 px-3 py-6 bg-white rounded-lg shadow border border-gold  bg-transparent
-                    justify-center items-center flex md:hidden space-x-10 sticky bottom-2 z-20"
+                    justify-center items-center flex md:hidden space-x-10 fixed bottom-2 z-20"
     >
       {MOBILE_MENU_ITEMS.map(({ Icon, label }, index: number) => (
         <div

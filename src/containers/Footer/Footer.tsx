@@ -11,9 +11,9 @@ const itemsClass =
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative w-full flex justify-center bg-primary bg-opacity-[72%] h-[386px] mt-[200px]">
-      <div className="absolute top-[-40%] bg-gray rounded-[14px] w-[1302px] h-[300px]">
-        <div className="absolute top-12 left-20">
+    <footer className="relative w-full flex flex-col xl:flex-row justify-center bg-primary bg-opacity-[72%] h-[500px] md:h-[386px] md:mt-[200px] pb-14 md:pb-0">
+      <div className="hidden md:block md:absolute md:top-[-40%] bg-gray rounded-[14px] w-full  min-[1304px]:w-[1302px] h-[300px]">
+        <div className="absolute top-10 xl:top-12 left-20">
           <Newsletter
             title="Get the latest news delivered to your inbox."
             description="Get access to the exciting stuff — exclusive new deals, product launches and more. Plus, get a 10% discount on your next order."
@@ -28,8 +28,8 @@ const Footer: React.FC = () => {
       </div>
 
       <div className=" flex flex-col items-center justify-end w-full max-w-[1440px] h-full">
-        <div className="w-full flex justify-center items-center gap-20">
-          <div className="flex items-center gap-14 py-10">
+        <div className="w-full flex flex-col md:flex-row justify-center items-center gap-5 xl:gap-20">
+          <div className="flex flex-col md:flex-row items-center gap-2 xl:gap-14 ">
             {FOOTER_OPTIONS_1.map((el: string) => (
               <div className={itemsClass} key={el}>
                 {el}
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
             placeholder={FooterLogo}
             alt="LogoFooter"
           />
-          <div className="flex items-center gap-14">
+          <div className="flex flex-col md:flex-row items-center gap-2 xl:gap-14">
             {FOOTER_OPTIONS_2.map((el: string) => (
               <div className={itemsClass} key={el}>
                 {el}
@@ -50,10 +50,15 @@ const Footer: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="flex w-full max-w-[1302px] justify-between border-t border-primary-dark py-10 ">
-          <label className="brandon-grotesque text-[14px] leading[22px] text-sand">
-            © 2021 biom. All rights reserved • Privacy Policy • Terms of Service
-          </label>
+        <div className="flex flex-col md:flex-row w-full items-center gap-2 max-w-[1302px] px-4 xl:px-0 justify-between border-t border-primary-dark mt-10 py-10 ">
+          <div className="flex flex-col md:flex-row items-center">
+            <label className="brandon-grotesque text-[14px] leading[22px] text-sand">
+              © 2021 biom. All rights reserved{" "}
+            </label>
+            <label className="brandon-grotesque text-[14px] leading[22px] text-sand">
+              Privacy Policy • Terms of Service
+            </label>
+          </div>
           <div className="flex items-center gap-2 ">
             {SOCIALS.map((el: TSocials) => (
               <div

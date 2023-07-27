@@ -13,14 +13,14 @@ const Newsletter: React.FC<TNewsletter> = ({ title, description }) => {
   };
 
   return (
-    <div className="w-[414px]">
-      <h2 className="chronicle-display font-extrabold text-[30px] leading-[38px] tracking-normal text-black max-w-[324px]">
+    <div className="w-full sm:w-[414px]">
+      <h2 className="chronicle-display font-extrabold text-[26px] xl:text-[30px] leading-[38px] tracking-normal text-black max-w-[324px]">
         {title}
       </h2>
-      <p className="brandon-grotesque font-normal text-[16px] leading-[26px] tracking-normal text-black py-3">
+      <p className="brandon-grotesque font-normal text-[12px] xl:text-[16px] leading-[26px] tracking-normal text-black py-3">
         {description}
       </p>
-      <div className="flex justify-between p-2 w-[414px] h-[52px] rounded-[6px] text-black bg-sand">
+      <div className="flex justify-between p-2 w-full xl:w-[414px] h-[52px] rounded-[6px] text-black bg-sand">
         <input
           className="px-2 brandon-grotesque text-[16px] leading-[30px] bg-sand w-full h-full outline-none focus:outline-none focus:ring-0"
           placeholder="Enter your email address"
