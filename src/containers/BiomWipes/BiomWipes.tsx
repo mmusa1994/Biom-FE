@@ -33,7 +33,7 @@ const BiomWipes: React.FC<TBiomWipes> = ({
           <h5 className="chronicle-display font-extrabold text-[28px] md:text-[36px] leading-[44px] tracking-normal text-black">
             {subtitle}
           </h5>
-          <p className="brandon-grotesque font-normal text-base md:text-[18px] leading-[28px] tracking-normal text-primary-dark w-full xl:max-w-[555px] h-[130px] md:h-[82px] pt-2 overflow-auto custom-scrollbar">
+          <p className="brandon-grotesque font-normal text-base md:text-[18px] leading-[28px] tracking-normal text-primary-dark w-full xl:max-w-[555px] h-[150px] md:h-[90px] pt-2 overflow-auto custom-scrollbar">
             {description}
           </p>
         </div>
