@@ -8,61 +8,69 @@ export const useCarousel = (totalSlides: number) => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
   }, [totalSlides]);
 
-  const previousSlide = () => {
+  const previousSlide = useCallback(() => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
-  };
+  }, [totalSlides]);
 
-  const handleMouseDown = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    event.preventDefault();
-    startXRef.current = event.clientX;
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
-  };
-
-  const handleMouseMove = (event: MouseEvent) => {
-    const diffX = event.clientX - startXRef.current;
-    if (Math.abs(diffX) > 50) {
-      if (diffX > 0) {
-        previousSlide();
-      } else {
-        nextSlide();
+  const handleMouseMove = useCallback(
+    (event: MouseEvent) => {
+      const diffX = event.clientX - startXRef.current;
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          previousSlide();
+        } else {
+          nextSlide();
+        }
+        startXRef.current = event.clientX;
       }
-      startXRef.current = event.clientX;
-    }
-  };
+    },
+    [nextSlide, previousSlide]
+  );
 
-  const handleMouseUp = () => {
+  const handleMouseUp = useCallback(() => {
     document.removeEventListener("mousemove", handleMouseMove);
     document.removeEventListener("mouseup", handleMouseUp);
-  };
+  }, [handleMouseMove]);
 
-  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
-    startXRef.current = event.touches[0].clientX;
-  };
+  const handleMouseDown = useCallback(
+    (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+      event.preventDefault();
+      startXRef.current = event.clientX;
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
+    },
+    [handleMouseMove, handleMouseUp]
+  );
 
-  const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    const diffX = event.touches[0].clientX - startXRef.current;
-    if (Math.abs(diffX) > 50) {
-      if (diffX > 0) {
-        previousSlide();
-      } else {
-        nextSlide();
+  const handleTouchMove = useCallback(
+    (event: React.TouchEvent<HTMLDivElement>) => {
+      event.preventDefault();
+      const diffX = event.touches[0].clientX - startXRef.current;
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          previousSlide();
+        } else {
+          nextSlide();
+        }
+        startXRef.current = event.touches[0].clientX;
       }
-      startXRef.current = event.touches[0].clientX;
-    }
-  };
+    },
+    [nextSlide, previousSlide]
+  );
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = useCallback(() => {
     startXRef.current = 0;
-  };
+  }, []);
 
-  // OPTIONAL TO AUTO SLIDE EVERY 5 SEC
+  const handleTouchStart = useCallback(
+    (event: React.TouchEvent<HTMLDivElement>) => {
+      startXRef.current = event.touches[0].clientX;
+    },
+    []
+  );
+
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
-
     return () => {
       clearInterval(interval);
     };

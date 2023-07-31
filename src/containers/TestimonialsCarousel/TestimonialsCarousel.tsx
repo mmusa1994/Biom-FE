@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useCarousel } from "../../hooks/useCarousel";
 import { CarouselContent } from "../../components/";
 import { ITestimonialCarouselProps } from "../../helpers/types";
@@ -22,18 +22,17 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = ({
     setActiveDot(currentSlide);
   }, [currentSlide]);
 
-  const handleMouseDownByDot = (index: number) => {
-    setActiveDot(index);
-    if (index > currentSlide) {
-      for (let i = currentSlide; i < index; i++) {
-        nextSlide();
+  const handleMouseDownByDot = useCallback(
+    (index: number) => {
+      setActiveDot(index);
+      if (index > currentSlide) {
+        Array.from({ length: index - currentSlide }, () => nextSlide());
+      } else if (index < currentSlide) {
+        Array.from({ length: currentSlide - index }, () => previousSlide());
       }
-    } else if (index < currentSlide) {
-      for (let i = currentSlide; i > index; i--) {
-        previousSlide();
-      }
-    }
-  };
+    },
+    [currentSlide, nextSlide, previousSlide]
+  );
 
   return (
     <div className="relative carousel-container">
